@@ -1,3 +1,29 @@
-body {
-    
+.calculator {
+    display: flex;
+    flex-wrap: wrap;
+    width: 450px;
+    height: 900px;
+    margin: auto;
+    align-content: flex-end;
+}
+
+button {
+    display: inline-block;
+    width: 112.5px;
+    height: 112.5px;
+    background-color: coral;
+    border-width: 0.5px solid;
+}
+
+#result {
+    width: 450px;
+    height: 337.5px;
+    background-color: black;
+    margin: 0;
+    align-items: baseline;
+    color: cornsilk;
+}
+
+#clear {
+    width: 225px;
 }
