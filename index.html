@@ -11,7 +11,7 @@
     </head>
 
     <body>
-        <div class="calculator">
+        <div class="calculator" onclick="sign_func(event);">
             <p id="result">Result</p>
             <button id="left-bracket">(</button>
             <button id="right-bracket">)</button>
@@ -35,6 +35,16 @@
         </div>
 
 
-
+    <script>
+        function sign_func(event) {
+            switch (event.target.id) {
+                case "+":
+                    document.getElementById("result").innerHTML += " + ";
+                case "-":
+                    document.getElementById("result").innerHTML += " - ";
+            }
+        }
+    </script>
+    
     </body>
 </html>
