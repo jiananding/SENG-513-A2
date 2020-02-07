@@ -16,11 +16,18 @@ button {
 
 #result {
     width: 450px;
-    height: 337.5px;
+    height: 168.75px;
     background-color: black;
     margin: 0;
     align-items: baseline;
     color: cornsilk;
+}
+
+#expression {
+    width: 450px;
+    height: 168.75px;
+    background-color: coral;
+    margin: 0;
 }
 
 #clear {

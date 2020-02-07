@@ -12,7 +12,8 @@
 
     <body>
         <div class="calculator" onclick="sign_func(event);">
-            <p id="result">Result</p>
+            <p id="expression"></p>
+            <p id="result"></p>
             <button id="left-bracket">(</button>
             <button id="right-bracket">)</button>
             <button id="clear">C</button>
@@ -23,7 +24,7 @@
             <button id="num_4">4</button>
             <button id="num_5">5</button>
             <button id="num_6">6</button>
-            <button id="multiply">X</button>
+            <button id="multiply">*</button>
             <button id="num_1">1</button>
             <button id="num_2">2</button>
             <button id="num_3">3</button>
@@ -38,10 +39,21 @@
     <script>
         function sign_func(event) {
             switch (event.target.id) {
-                case "+":
-                    document.getElementById("result").innerHTML += " + ";
-                case "-":
-                    document.getElementById("result").innerHTML += " - ";
+                case "equal": 
+                    try {
+                        document.getElementById("result").innerText = eval(document.getElementById("expression").innerText);
+                    } catch (e) {
+                        document.getElementById("result").innerText = "error";
+                        break;
+                    }
+                    break;
+                case "clear":
+                    document.getElementById("expression").innerText = "";
+                    document.getElementById("result").innerText = "";
+                    break;
+                default:
+                    document.getElementById("expression").innerText += event.target.innerHTML;
+                    break;
             }
         }
     </script>
