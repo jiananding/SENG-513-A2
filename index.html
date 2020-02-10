@@ -17,6 +17,7 @@
             <button id="left-bracket">(</button>
             <button id="right-bracket">)</button>
             <button id="clear">C</button>
+            <button id="backspace">CE</button>
             <button id="num_7">7</button>
             <button id="num_8">8</button>
             <button id="num_9">9</button>
@@ -38,7 +39,8 @@
 
     <script>
         function sign_func(event) {
-            switch (event.target.id) {
+            if (event.target.nodeName == "BUTTON") {
+                switch (event.target.id) {
                 case "equal": 
                     try {
                         document.getElementById("result").innerText = eval(document.getElementById("expression").innerText);
@@ -51,9 +53,14 @@
                     document.getElementById("expression").innerText = "";
                     document.getElementById("result").innerText = "";
                     break;
+                case "backspace":
+                    let temp = document.getElementById("expression").innerHTML;
+                    document.getElementById("expression").innerHTML = temp.slice(0, -1);
+                    break;
                 default:
                     document.getElementById("expression").innerText += event.target.innerHTML;
                     break;
+            }
             }
         }
     </script>

@@ -1,22 +1,22 @@
 .calculator {
     display: flex;
     flex-wrap: wrap;
-    width: 450px;
-    height: 900px;
+    width: 600px;
+    height: 1080px;
     margin: auto;
     align-content: flex-end;
 }
 
 button {
     display: inline-block;
-    width: 112.5px;
-    height: 112.5px;
+    width: 150px;
+    height: 150px;
     border-width: 0.5px solid;
 }
 
 #result {
-    width: 450px;
-    height: 168.75px;
+    width: 600px;
+    height: 165px;
     background-color: black;
     margin: 0;
     align-items: baseline;
@@ -24,12 +24,8 @@ button {
 }
 
 #expression {
-    width: 450px;
-    height: 168.75px;
+    width: 600px;
+    height: 165px;
     background-color: coral;
     margin: 0;
-}
-
-#clear {
-    width: 225px;
 }
