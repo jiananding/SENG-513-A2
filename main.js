@@ -1,6 +1,7 @@
 const expression = document.querySelector("#expression");
 const result = document.querySelector("#result");
 
+let started = false;
 
 const left_bracket_button = document.querySelector("#left-bracket");
 left_bracket_button.addEventListener("click", () => {
@@ -101,6 +102,15 @@ plus_button.addEventListener("click", () => {
 const num_buttons = document.querySelectorAll("#num");
 for (const num_button of num_buttons) {
     num_button.addEventListener("click", (e) => {
-        expression.textContent += e.target.textContent;
+        if (!started) {
+            started = true;
+            expression.textContent = e.target.textContent;
+        } else {
+            if (expression.textContent.length !== 1 || expression.textContent !== "0") {
+                expression.textContent += e.target.textContent;
+            } else {
+                expression.textContent = e.target.textContent;
+            }
+        }
     });
 }
