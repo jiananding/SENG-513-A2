@@ -12,7 +12,7 @@
 
     <body>
         <div class="calculator" onclick="sign_func(event);">
-            <p id="expression"></p>
+            <p id="expression">0</p>
             <p id="result"></p>
             <button id="left-bracket">(</button>
             <button id="right-bracket">)</button>
@@ -21,7 +21,7 @@
             <button id="num_7">7</button>
             <button id="num_8">8</button>
             <button id="num_9">9</button>
-            <button id="slach">/</button>
+            <button id="divide">/</button>
             <button id="num_4">4</button>
             <button id="num_5">5</button>
             <button id="num_6">6</button>
@@ -36,34 +36,7 @@
             <button id="plus">+</button>
         </div>
 
+    <script src="main.js"></script>
 
-    <script>
-        function sign_func(event) {
-            if (event.target.nodeName == "BUTTON") {
-                switch (event.target.id) {
-                case "equal": 
-                    try {
-                        document.getElementById("result").innerText = eval(document.getElementById("expression").innerText);
-                    } catch (e) {
-                        document.getElementById("result").innerText = "error";
-                        break;
-                    }
-                    break;
-                case "clear":
-                    document.getElementById("expression").innerText = "";
-                    document.getElementById("result").innerText = "";
-                    break;
-                case "backspace":
-                    let temp = document.getElementById("expression").innerHTML;
-                    document.getElementById("expression").innerHTML = temp.slice(0, -1);
-                    break;
-                default:
-                    document.getElementById("expression").innerText += event.target.innerHTML;
-                    break;
-            }
-            }
-        }
-    </script>
-    
     </body>
 </html>
