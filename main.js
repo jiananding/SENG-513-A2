@@ -7,6 +7,7 @@ const left_bracket_button = document.querySelector("#left-bracket");
 left_bracket_button.addEventListener("click", () => {
     // if at the beginning, zero is clicked, then click this button will allow and show '0('
     if (expression.textContent === "0") {
+        
         expression.textContent = "(";
     } else {
         expression.textContent += "(";
