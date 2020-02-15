@@ -12,11 +12,11 @@
 
 button {
     display: inline-block;
-    width: 130px;
-    height: 130px;
+    width: 128px;
+    height: 128px;
     border: none;
-    border-radius: 65px;
-    margin: 10px;
+    border-radius: 64px;
+    margin: 11px;
     background-color: #505050;
     color: white;
     font-size: xxx-large;
@@ -80,7 +80,6 @@ button:nth-child(22) {
     color: white;
     font-size: xxx-large;
     padding-left: 15px;
-    background-color: rgba(71, 71, 71, 0.7);
+    /* background-color: rgba(71, 71, 71, 0.7); */
     border-radius: 20px;
 }
-
